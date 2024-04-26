@@ -1,0 +1,182 @@
+@import url(https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo);
+
+.itim-regular {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header-logo {
+    position: absolute;
+    width: 24.38px;
+    height: 27.99px;
+    left: 45px;
+    right: 1850.62px;
+    top: 34px;
+    bottom: 47.01px;
+}
+.header-logo {
+    color: rgb(70, 50, 34);
+    font-family: Itim;
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header-logo-text {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 88px;
+    right: 1632px;
+    top: 34px;
+    bottom: 45px;
+}
+.header-logo-text {
+    color: rgb(70, 50, 34);
+    font-family: JejuMyeongjo;
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header-bar-roulette {
+    position: absolute;
+    width: 121px;
+    height: 24px;
+    left: 307px;
+    right: 1492px;
+    top: 41px;
+    bottom: 44px;
+}
+.header-bar-roulette{
+    color: rgb(70, 50, 34);
+    font-family: JejuMyeongjo;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+}
+
+.header-enterance-button {
+    position: absolute;
+    width: 54px;
+    height: 28px;
+    left: 1809px;
+    right: 57px;
+    top: 39px;
+    bottom: 42px;
+}
+.header-enterance-button {
+    color: rgb(70, 50, 34);
+    font-family: Itim;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+script{
+    text-align: right;
+}
+
+* {
+    margin: 0;
+}
+
+*,*:before,*::after{
+    box-sizing: border-box;
+    content: none !important;
+}
+
+
+
+body {
+    margin: 0;
+    background-color: #ffffff;   
+}
+
+.header-line{
+    position: absolute;
+    width: 1920px;
+    height: 109px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: rgb(223, 211, 200);   
+}
+
+.d1 form {
+    width: auto;
+    float: right;
+    margin-right: 30px;
+  }
+.d1 input {
+    width: 250px;
+    height: 42px;
+    padding-left: 15px;
+    border-radius: 42px;
+    border: 2px solid #665556;
+    background: #F9F0DA;
+    outline: none;
+    position: relative;
+    transition: .3s linear;
+}
+.d1 input:focus {
+    width: 300px;
+}
+.d1 button {
+    width: 42px;
+    height: 42px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+.d1 button:before{
+    content: "\f002";
+    font-family: FontAwesome;
+    color: #324b4e;
+}
+.d1{
+    position: absolute;
+    width: 410px;
+    height: 40px;
+    left: 1353px;
+    right: -1353px;
+    top: 34px;
+    bottom: -34px;
+}
+
+.sideline {
+    position: absolute;
+    width: 693px;
+    height: 971px;
+    left: 0;
+    right: 0;
+    top: 109px;
+    bottom: -109px;
+}
+.sideline {
+    box-shadow: 37px 24px 18.7px -27px rgba(0, 0, 0, 0.44);
+    background: rgb(177, 160, 147);
+}
+
+
+
+
+
+
+
+
+
+

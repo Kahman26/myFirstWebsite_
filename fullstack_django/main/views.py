@@ -8,3 +8,7 @@ def index(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+
+def roulette(request):
+    return render(request, 'main/roulette.html')
