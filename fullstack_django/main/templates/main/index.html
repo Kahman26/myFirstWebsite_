@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+<!--    Подключение файла map1-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+            $('#includedContent').load("map1.html");
+        });
+    </script>
 </head>
 <body>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +47,8 @@
         <
 
     </div>
-    <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adee8b9a221a991ff6f1de4688d8d0945009c4cc0a0cf86656497a9c82772e5ab&amp;width=1920&amp;height=935&amp;lang=ru_RU&amp;scroll=true"></script>
-
+    <!-- <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adee8b9a221a991ff6f1de4688d8d0945009c4cc0a0cf86656497a9c82772e5ab&amp;width=1920&amp;height=935&amp;lang=ru_RU&amp;scroll=true"></script> -->
+    <!-- Куда вставляю карту -->
+    <div id="includedContent"></div>
 </body>
 </html>
