@@ -1,5 +1,8 @@
 {% load static %}
+{% load cache %}
 
+
+{% cache 60 * 15 main_page %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,10 +11,10 @@
     <title>Main page</title>
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 <!--    Подключение файла map1-->
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="import" href="/map1.html">
     <script>
         $(function(){
-            $('#includedContent').load("map1.html");
+            $('includedContent').load("map1.html");
         });
     </script>
 </head>
@@ -48,7 +51,156 @@
 
     </div>
     <!-- <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adee8b9a221a991ff6f1de4688d8d0945009c4cc0a0cf86656497a9c82772e5ab&amp;width=1920&amp;height=935&amp;lang=ru_RU&amp;scroll=true"></script> -->
-    <!-- Куда вставляю карту -->
-    <div id="includedContent"></div>
+
+    <!-- Снизу HTML карты -->
+
+    <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_600e760b35d28e78f7282004a55bb7d0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    </head>
+    <body>
+
+
+            <div class="folium-map" id="map_600e760b35d28e78f7282004a55bb7d0" ></div>
+
+    </body>
+    <script>
+
+
+            var map_600e760b35d28e78f7282004a55bb7d0 = L.map(
+                "map_600e760b35d28e78f7282004a55bb7d0",
+                {
+                    center: [56.837703, 60.597564],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+
+
+
+
+            var tile_layer_7e3818839e8a296096ea17021f156f94 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+
+
+            tile_layer_7e3818839e8a296096ea17021f156f94.addTo(map_600e760b35d28e78f7282004a55bb7d0);
+
+
+            var marker_cluster_e4ae79b78ec358aa96ebd38ecbf69ad3 = L.markerClusterGroup(
+                {}
+            );
+
+
+            var circle_marker_9eb5b49397f65af4f099390477deac78 = L.circleMarker(
+                [56.835473, 60.598413],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e4ae79b78ec358aa96ebd38ecbf69ad3);
+
+
+        var popup_51dc2cd2934db3d5a6c0daea5a17d8e0 = L.popup({"maxWidth": "100%"});
+
+
+
+                var html_16a14b4690fa61813624b50120e30726 = $(`<div id="html_16a14b4690fa61813624b50120e30726" style="width: 100.0%; height: 100.0%;">Коллектив</div>`)[0];
+                popup_51dc2cd2934db3d5a6c0daea5a17d8e0.setContent(html_16a14b4690fa61813624b50120e30726);
+
+
+
+        circle_marker_9eb5b49397f65af4f099390477deac78.bindPopup(popup_51dc2cd2934db3d5a6c0daea5a17d8e0)
+        ;
+
+
+
+
+            var circle_marker_bc2ae81723f8ade70a1783866d212e93 = L.circleMarker(
+                [56.833624, 60.594333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e4ae79b78ec358aa96ebd38ecbf69ad3);
+
+
+        var popup_ea06bda7f3167fcb5b080be01e50642c = L.popup({"maxWidth": "100%"});
+
+
+
+                var html_b2dac196493bfb3d7f3d352b8fe9b4cf = $(`<div id="html_b2dac196493bfb3d7f3d352b8fe9b4cf" style="width: 100.0%; height: 100.0%;">Самоцвет</div>`)[0];
+                popup_ea06bda7f3167fcb5b080be01e50642c.setContent(html_b2dac196493bfb3d7f3d352b8fe9b4cf);
+
+
+
+        circle_marker_bc2ae81723f8ade70a1783866d212e93.bindPopup(popup_ea06bda7f3167fcb5b080be01e50642c)
+        ;
+
+
+
+
+            var circle_marker_dc660475464ef0dceb8fa8fca1858532 = L.circleMarker(
+                [56.84281, 60.618639],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e4ae79b78ec358aa96ebd38ecbf69ad3);
+
+
+        var popup_a54e43fc1469a7ef32dd10c60c65d98a = L.popup({"maxWidth": "100%"});
+
+
+
+                var html_0d72068da129eab456461c544dcee2d1 = $(`<div id="html_0d72068da129eab456461c544dcee2d1" style="width: 100.0%; height: 100.0%;">Мелодия</div>`)[0];
+                popup_a54e43fc1469a7ef32dd10c60c65d98a.setContent(html_0d72068da129eab456461c544dcee2d1);
+
+
+
+        circle_marker_dc660475464ef0dceb8fa8fca1858532.bindPopup(popup_a54e43fc1469a7ef32dd10c60c65d98a)
+        ;
+
+
+
+
+            marker_cluster_e4ae79b78ec358aa96ebd38ecbf69ad3.addTo(map_600e760b35d28e78f7282004a55bb7d0);
+
+    </script>
+
+
+        <!-- HTML карты закончен-->
 </body>
 </html>
+
+{% endcache %}
